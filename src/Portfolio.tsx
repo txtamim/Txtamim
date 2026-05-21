@@ -19,7 +19,6 @@ const Portfolio = () => {
       desc: "Advertising a restaurant for better sales than traditional methods via web platform.",
       tech: ["React", "Tailwind"],
       liveLink: "/res",
-      githubLink: "https://github.com/txtamim/gitlab/blob/main/src/Res.tsx",
       img: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800"
     },
     {
@@ -28,7 +27,6 @@ const Portfolio = () => {
       desc: "Advertising a restaurant for better sales than traditional methods via web platform.",
       tech: ["Express", "React"],
       liveLink: "/pro",
-      githubLink: "https://github.com/txtamim/gitlab/blob/main/src/Res.tsx",
       img: "https://static.vecteezy.com/system/resources/thumbnails/000/542/011/small/abstract-background-website-landing-page.png"
     }
   ];
@@ -276,14 +274,7 @@ const Portfolio = () => {
                       >
                         <i className="bi bi-eye"></i> Live
                       </Link>
-                      <a
-                        href={project.githubLink}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="px-3 py-1.5 border border-zinc-300 hover:border-indigo-400 rounded text-zinc-700 hover:text-indigo-600 flex items-center justify-center"
-                      >
-                        <i className="bi bi-github"></i>
-                      </a>
+
                     </div>
                   </div>
                 </div>

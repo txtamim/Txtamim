@@ -108,6 +108,7 @@ const fallbackImg = "https://images.unsplash.com/photo-1587825140708-df23e08639e
 
 const Seller: React.FC = () => {
   const [search, setSearch] = useState("");
+  const [payment, setPayment] = useState("cod");
   const [cart, setCart] = useState<number[]>([]);
   const [selectedProduct, setSelectedProduct] = useState<typeof products[0] | null>(null);
   const [activeCategory, setActiveCategory] = useState("All");
@@ -250,12 +251,6 @@ const Seller: React.FC = () => {
 
                 <div className="flex justify-between items-center">
                   <span className="text-xl font-bold text-white">${product.price}</span>
-                  <button
-                    onClick={(e) => { e.stopPropagation(); addToCart(product.id) }}
-                    className="px-3 py-1.5 bg-zinc-800 hover:bg-amber-500 text-zinc-200 hover:text-black text-xs font-medium rounded-lg transition"
-                  >
-                    <i className="bi bi-cart-plus mr-1"></i>Buy
-                  </button>
                 </div>
               </div>
             </div>
@@ -313,35 +308,38 @@ const Seller: React.FC = () => {
               {/* Price & Add to Cart */}
               <div className="flex justify-between items-center mb-6 pb-6 border-b border-zinc-800">
                 <span className="text-3xl font-bold text-white">${selectedProduct.price}</span>
-                <button
+                
+                {/*your Product link*/}
+                <a href="#"
                   onClick={() => addToCart(selectedProduct.id)}
                   className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-black font-bold rounded-lg transition"
                 >
                   <i className="bi bi-cart-plus mr-2"></i>Buy It
-                </button>
+                </a>
               </div>
 
               {/* Payment Options */}
               <div>
                 <h4 className="font-semibold mb-3 text-zinc-200">Payment Methods</h4>
                 <div className="grid grid-cols-2 gap-3 text-sm">
-                  <div className="flex items-center gap-2 p-3 bg-zinc-850 border border-zinc-800 rounded-lg">
+                  <button onClick={() => setPayment("cod")} className={`flex items-center gap-2 p-3 bg-zinc-850 border border-zinc-800 rounded-lg ${payment === "cod" ? "shadow-[0_0_10px_rgba(200,200,200,0.5)]" : "shadow-none"}`}>
                     <i className="bi bi-cash-coin text-xl text-green-500"></i>
                     <span className="text-zinc-300">Cash on Delivery</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-3 bg-zinc-850 border border-zinc-800 rounded-lg">
+                  </button>
+                  <button onClick={() => setPayment("cd")} className={`flex items-center gap-2 p-3 bg-zinc-850 border border-zinc-800 rounded-lg ${payment === "cd" ? "shadow-[0_0_10px_rgba(200,200,200,0.5)]" : "shadow-none"}`}>
                     <i className="bi bi-credit-card text-xl text-blue-500"></i>
                     <span className="text-zinc-300">Card Payment</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-3 bg-zinc-850 border border-zinc-800 rounded-lg">
+                  </button>
+                  <button onClick={() => setPayment("mb")} className={`flex items-center gap-2 p-3 bg-zinc-850 border border-zinc-800 rounded-lg ${payment === "mb" ? "shadow-[0_0_10px_rgba(200,200,200,0.5)]" : "shadow-none"}`}>
                     <i className="bi bi-phone text-xl text-purple-500"></i>
                     <span className="text-zinc-300">Mobile Banking</span>
-                  </div>
-                  <div className="flex items-center gap-2 p-3 bg-zinc-850 border border-zinc-800 rounded-lg">
+                  </button>
+                  <button onClick={() => setPayment("dw")} className={`flex items-center gap-2 p-3 bg-zinc-850 border border-zinc-800 rounded-lg ${payment === "dw" ? "shadow-[0_0_10px_rgba(200,200,200,0.5)]" : "shadow-none"}`}>
                     <i className="bi bi-wallet2 text-xl text-orange-500"></i>
                     <span className="text-zinc-300">Digital Wallet</span>
-                  </div>
+                  </button>
                 </div>
+                {/* Your web security */}
                 <p className="text-xs text-zinc-500 mt-3">
                   <i className="bi bi-shield-check text-green-500"></i> 100% secure payment. SSL encrypted checkout.
                 </p>
@@ -366,6 +364,7 @@ const Seller: React.FC = () => {
             <div className="bg-zinc-900 p-6 rounded-xl text-center border border-zinc-800 shadow-sm">
               <i className="bi bi-truck text-3xl text-amber-500 mb-3"></i>
               <h4 className="font-semibold text-zinc-200 mb-1">Fast Delivery</h4>
+              {/* Time of delevary */}
               <p className="text-sm text-zinc-400">Get your order in 24-48 hours across the country</p>
             </div>
             <div className="bg-zinc-900 p-6 rounded-xl text-center border border-zinc-800 shadow-sm">
@@ -375,7 +374,7 @@ const Seller: React.FC = () => {
             </div>
           </div>
 
-          {/* Testimonials */}
+          {/* Users recommendation*/}
           <div className="mt-12 grid md:grid-cols-2 gap-6">
             <div className="bg-zinc-900 p-6 rounded-xl border border-zinc-800 shadow-sm">
               <div className="flex items-center gap-3 mb-3">
@@ -391,7 +390,6 @@ const Seller: React.FC = () => {
                 "Fast delivery and excellent product quality. Highly recommended!"
               </p>
             </div>
-
             <div className="bg-zinc-900 p-6 rounded-xl border border-zinc-800 shadow-sm">
               <div className="flex items-center gap-3 mb-3">
                 <img src="https://i.pravatar.cc/100?img=2" className="w-12 h-12 rounded-full" />
@@ -414,6 +412,7 @@ const Seller: React.FC = () => {
       <footer className="bg-zinc-950 text-zinc-500 pt-16 pb-8 px-6 border-t border-zinc-900">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 mb-10 px-6 md:px-20">
           <div>
+            {/* Add your web name */}
             <h4 className="text-white font-bold text-xl mb-4">
               Sell<span className="text-amber-500">Store</span>
             </h4>
@@ -426,7 +425,7 @@ const Seller: React.FC = () => {
               <i className="bi bi-twitter text-xl hover:text-amber-500 cursor-pointer transition-colors"></i>
             </div>
           </div>
-
+          {/* Add your own information*/}
           <div>
             <h5 className="text-white font-semibold mb-4">Contact Info</h5>
             <ul className="space-y-3 text-sm text-zinc-400">
