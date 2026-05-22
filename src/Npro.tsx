@@ -154,34 +154,51 @@ export default function PremiumProductLanding() {
             </div>
 
             {/* Core Trust Indicators */}
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-neutral-800 text-center text-xs font-bold tracking-wide text-neutral-400">
-              <div className="p-3 bg-neutral-900/30 rounded-xl border border-neutral-900">⚡ Nationwide Fast Delivery</div>
-              <div className="p-3 bg-neutral-900/30 rounded-xl border border-neutral-900">🛡️ 1-Year Brand Warranty</div>
-              <div className="p-3 bg-neutral-900/30 rounded-xl border border-neutral-900">🤝 Cash On Delivery</div>
-            </div>
+          
           </div>
         </div>
 
         {/* 3. DETAILED FEATURES SECTION */}
         <section id="features" className="py-24 space-y-16">
-          <div className="text-center max-w-2xl mx-auto space-y-4">
+     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-neutral-800 text-center text-xs font-bold tracking-wide text-neutral-400">
+  
+  {/* ১. ফাস্ট ডেলিভারি */}
+  <div className="p-3 bg-neutral-900/30 rounded-xl border border-neutral-900 flex items-center justify-center gap-2">
+    <i className="bi bi-lightning-charge-fill text-yellow-400 text-sm"></i>
+    <span>Nationwide Fast Delivery</span>
+  </div>
+
+  {/* ২. ব্র্যান্ড ওয়ারেন্টি */}
+  <div className="p-3 bg-neutral-900/30 rounded-xl border border-neutral-900 flex items-center justify-center gap-2">
+    <i className="bi bi-shield-check text-emerald-400 text-sm"></i>
+    <span>1-Year Brand Warranty</span>
+  </div>
+
+  {/* ৩. ক্যাশ অন ডেলিভারি */}
+  <div className="p-3 bg-neutral-900/30 rounded-xl border border-neutral-900 flex items-center justify-center gap-2">
+    <i className="bi bi-people-fill text-cyan-400 text-sm"></i>
+    <span>Cash On Delivery</span>
+  </div>
+
+</div>
+     <div className="text-center max-w-2xl mx-auto space-y-4">
             <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white">Why Upgrade to AuraPulse?</h2>
             <p className="text-neutral-400">Engineered to outperform the market standards with ground-breaking integration systems.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-neutral-900/40 p-8 rounded-2xl border border-neutral-800 hover:border-neutral-700 transition">
-              <div className="text-3xl mb-4">🔋</div>
+              <i className="text-3xl mb-4 text-green-400 bi bi-battery-charging display-6"></i>
               <h3 className="font-extrabold text-white text-xl mb-2">14-Day Battery Armor</h3>
               <p className="text-neutral-400 text-sm leading-relaxed">Advanced power-optimization computing ensures continuous workflow tracking for two full weeks without a charge.</p>
             </div>
             <div className="bg-neutral-900/40 p-8 rounded-2xl border border-neutral-800 hover:border-neutral-700 transition">
-              <div className="text-3xl mb-4">❤️</div>
+              ️<i className="bi bi-heart-pulse-fill display-6 text-3xl mb-4 text-red-400"></i>
               <h3 className="font-extrabold text-white text-xl mb-2">Precision Bio-Tracking</h3>
               <p className="text-neutral-400 text-sm leading-relaxed">Real-time photoplethysmogram system records heart rates, SpO2 counts, stress thresholds, and clinical deep-sleep metrics.</p>
             </div>
             <div className="bg-neutral-900/40 p-8 rounded-2xl border border-neutral-800 hover:border-neutral-700 transition">
-              <div className="text-3xl mb-4">🌊</div>
+              <i className="text-3xl text-cyan-400 mb-4 bi bi-water display-6"></i>
               <h3 className="font-extrabold text-white text-xl mb-2">5ATM Waterproof Rating</h3>
               <p className="text-neutral-400 text-sm leading-relaxed">Completely sealed structural integrity supports deep-end swimming, heavy rain downpours, and intense workout sessions.</p>
             </div>
@@ -217,7 +234,7 @@ export default function PremiumProductLanding() {
 
           {ordered ? (
             <div className="bg-emerald-950/40 border border-emerald-800 p-8 rounded-2xl text-center space-y-4">
-              <div className="text-4xl">🎉</div>
+              <div className="text-4xl"><i className="bi bi-check-circle-fill display-5"></i></div>
               <h3 className="text-xl font-bold text-emerald-400">Order Placed Successfully!</h3>
               <p className="text-neutral-400 text-sm">Thank you, <span className="text-white font-bold">{formData.name}</span>. Our distribution verification representative will contact you at <span className="text-white font-bold">{formData.phone}</span> within 24 hours.</p>
             </div>

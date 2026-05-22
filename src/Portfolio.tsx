@@ -40,11 +40,10 @@ const Portfolio = () => {
 
   return (
     <div className="bg-slate-50 min-h-screen font-sans text-gray-800">
-      {/* --- Main Container --- */}
-      <div className="max-w-5xl [&>*:not(:nth-child(1))]:mx-5 pt-0 py-8 px-0">
-        
-        {/* --- Hero Section --- */}
-        <section className="pt-8 p-1 mx-auto md:p-12 mb-8 bg-gradient-to-b from-indigo-300 to-zinc-50 px-4">
+      
+      {/* --- Hero Section wrapper (এটিকে বাইরে আনা হয়েছে বড় স্ক্রিনে Full Width গ্রাডিয়েন্ট পাওয়ার জন্য) --- */}
+      <section className="pt-8 pb-8 bg-gradient-to-b from-indigo-300 to-zinc-50 px-2 md:px-4 md:px-0 mb-8">
+        <div className="max-w-5xl mx-auto px-3 md:px-5 md:px-12 pt-8 p-1">
           <div className="flex flex-row items-center gap-4 md:gap-10 ">
             {/* Intro Text */}
             <div className="flex-1">
@@ -90,11 +89,15 @@ const Portfolio = () => {
             A Student of HSC science batch 2026-2027 & Web template creator with modern MERN technology
           </p>
           <div className="mt-4 flex md:hidden gap-4 text-xl">
-            <a href="#" className="text-green-500 hover:text-green-600"><i className="bi bi-whatsapp"></i></a>
-            <a href="#" className="text-blue-600 hover:text-blue-700"><i className="bi bi-facebook"></i></a>
-            <a href="#" className="text-slate-900 hover:text-gray-700"><i className="bi bi-github"></i></a>
+            <a href="https://wa.me/8801890973552/" className="text-green-500 hover:text-green-600"><i className="bi bi-whatsapp"></i></a>
+            <a href="https://www.facebook.com/share/1H9JxmR4eq/" className="text-blue-600 hover:text-blue-700"><i className="bi bi-facebook"></i></a>
+            <a href="https://github.com/txtamim/" className="text-slate-900 hover:text-gray-700"><i className="bi bi-github"></i></a>
           </div>
-        </section>
+        </div>
+      </section>
+
+      {/* --- Main Container (হিরো বাদে অন্য সব কন্টেন্টের জন্য) --- */}
+      <div className="max-w-5xl mx-auto px-5 py-8 pt-0">
 
         {/* --- About & Personal Info Grid --- */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -336,7 +339,7 @@ const Portfolio = () => {
         <footer className="mt-12 text-center pb-10">
           <p className="text-gray-400 text-sm mb-6 uppercase tracking-widest">Connect with me</p>
           <div className="flex justify-center gap-6">
-            <a href="https://wa.me/8801890973552?text=Hey,%0ACan%20we%20chat%20each%20%26&20other?" className="w-12 h-12 bg-white shadow-md rounded-full flex items-center justify-center text-green-500 text-xl hover:bg-green-500 hover:text-white transition-all">
+            <a href="https://wa.me/8801890973552?text=Hey,%0ALet's%20chat%20each%20%26%20other?" className="w-12 h-12 bg-white shadow-md rounded-full flex items-center justify-center text-green-500 text-xl hover:bg-green-500 hover:text-white transition-all">
               <i className="bi bi-whatsapp"></i>
             </a>
             <a href="https://www.facebook.com/share/1H9JxmR4eq/" className="w-12 h-12 bg-white shadow-md rounded-full flex items-center justify-center text-blue-600 text-xl hover:bg-blue-600 hover:text-white transition-all">
@@ -345,7 +348,7 @@ const Portfolio = () => {
             <a href="https://github.com/txtamim/" className="w-12 h-12 bg-white shadow-md rounded-full flex items-center justify-center text-slate-900 text-xl hover:bg-slate-900 hover:text-white transition-all">
               <i className="bi bi-github"></i>
             </a>
-            <a href="https://txtamim058@gmail.com" className="w-12 h-12 bg-white shadow-md rounded-full flex items-center justify-center text-red-500 text-xl hover:bg-red-500 hover:text-white transition-all">
+            <a href="mailto:txtamim058@gmail.com" className="w-12 h-12 bg-white shadow-md rounded-full flex items-center justify-center text-red-500 text-xl hover:bg-red-500 hover:text-white transition-all">
               <i className="bi bi-envelope"></i>
             </a>
           </div>
