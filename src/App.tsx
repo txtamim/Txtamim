@@ -4,6 +4,7 @@ import Portfolio from "./Portfolio";
 import Seller from "./Seller";
 import Scroll from "./Scroll";
 import Pro from "./Pro";
+import Npro from "./Npro";
 
 function App() {
   return(
@@ -13,6 +14,7 @@ function App() {
       <Route path="/" element={<Portfolio/>} />
       <Route path="/res" element={<Res/>} />
       <Route path="/pro" element={<Pro/>} />
+      <Route path="/npro" element={<Npro/>} />
       <Route path="/sel" element={<Seller/>} />
     </Routes>
     </>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function LandingPage() {
+export default function Pro() {
   const [menuOpen, setMenuOpen] = useState(false);
   
   const scrollTo = (id: string) => {

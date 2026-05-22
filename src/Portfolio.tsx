@@ -1,5 +1,5 @@
 import React from 'react';
-import img from "./assets/Iam.jpg";
+import img from "./assets/Iam.jpeg";
 import { Link } from "react-router-dom";
 
 const Portfolio = () => {
@@ -10,7 +10,6 @@ const Portfolio = () => {
       desc: "Responsive landing page with cart, product filter, and smooth animations",
       tech: ["Node", "Mongodb"],
       liveLink: "/sel",
-      githubLink: "https://github.com/txtamim/gitlab/blob/main/src/Seller.tsx",
       img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600 "
     },
     {
@@ -22,8 +21,16 @@ const Portfolio = () => {
       img: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800"
     },
     {
-      id: 2,
-      title: "Product landing page",
+      id: 3,
+      title: "Electronics product landing",
+      desc: "Advertising a restaurant for better sales than traditional methods via web platform.",
+      tech: ["Express", "React"],
+      liveLink: "/npro",
+      img: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800"
+    },
+    {
+      id: 4,
+      title: "Digital Product landing ",
       desc: "Advertising a restaurant for better sales than traditional methods via web platform.",
       tech: ["Express", "React"],
       liveLink: "/pro",
@@ -34,10 +41,10 @@ const Portfolio = () => {
   return (
     <div className="bg-slate-50 min-h-screen font-sans text-gray-800">
       {/* --- Main Container --- */}
-      <div className="max-w-5xl mx-auto [&>*:not(:nth-child(1))]:mx-4 pt-0 py-8">
+      <div className="max-w-5xl [&>*:not(:nth-child(1))]:mx-5 pt-0 py-8 px-0">
         
         {/* --- Hero Section --- */}
-        <section className="pt-8 p-1 md:p-12 mb-8 bg-gradient-to-b from-indigo-300 to-zinc-50 px-4">
+        <section className="pt-8 p-1 mx-auto md:p-12 mb-8 bg-gradient-to-b from-indigo-300 to-zinc-50 px-4">
           <div className="flex flex-row items-center gap-4 md:gap-10 ">
             {/* Intro Text */}
             <div className="flex-1">
