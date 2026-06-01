@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Res = () => {
   const menuItems = [
@@ -16,13 +16,13 @@ const Res = () => {
   const [see, setSee] = useState(true);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
-  const handleSearchChange = (e) => {
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
     setShowSuggestions(true);
   };
 
   const handleSuggestionClick = (name) => {
-    setSearchTerm(name);
+    setSearchTerm(name); 
     setShowSuggestions(false);
   };
 
