@@ -8,7 +8,7 @@ export default function PremiumProductLanding() {
 
   // Product Data
   const product = {
-    name: "AuraPulse X1 Smartwatch",
+    name: "AuraPulse X1 Smartwatch", 
     tagline: "Redefining Premium Wearable Technology",
     price: 3499,
     oldPrice: 4999,
