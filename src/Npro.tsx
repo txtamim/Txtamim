@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function PremiumProductLanding() {
   const [cartCount, setCartCount] = useState(0);
@@ -16,7 +16,7 @@ export default function PremiumProductLanding() {
     brief: "Experience ultimate luxury and extreme performance. Crafted with an aerospace-grade titanium alloy casing and a stunning AMOLED sapphire display, the AuraPulse X1 keeps you ahead in both health tracking and professional lifestyle management.",
   };
 
-  const handleOrder = (e) => {
+  const handleOrder = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if(formData.name && formData.phone && formData.address) {
       setOrdered(true);
@@ -64,29 +64,28 @@ export default function PremiumProductLanding() {
               
               {/* Sleek SVG Smartwatch Wireframe Graphics */}
               <svg 
-  className="w-56 h-56 text-cyan-400/80 drop-shadow-[0_0_15px_rgba(34,211,238,0.3)] group-hover:scale-105 transition duration-500" 
-  viewBox="0 0 100 100" 
-  fill="none" 
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path d="M35 15 C35 5, 65 5, 65 15 L60 30 L40 30 Z" fill="#1e293b" />
-  <path d="M35 85 C35 95, 65 95, 65 85 L60 70 L40 70 Z" fill="#1e293b" />
-  
-  <rect x="25" y="25" width="50" height="50" rx="12" fill="#0f172a" stroke="#334155" strokeWidth="2" />
-  
-  <rect x="29" y="29" width="42" height="42" rx="8" fill="#020617" />
-  
-  <rect x="75" y="42" width="3" height="16" rx="1.5" fill="#64748b" />
-  
-  <text x="50" y="49" fill="#22d3ee" fontSize="10" fontWeight="bold" textAnchor="middle" fontFamily="sans-serif">10:09</text>
-  
-  <circle cx="50" cy="61" r="5" stroke="#1e293b" strokeWidth="1.5" fill="none" />
-  <circle cx="50" cy="61" r="5" stroke="#22d3ee" strokeWidth="1.5" strokeDasharray="20 10" fill="none" />
-  
-  <circle cx="38" cy="61" r="2" fill="#22d3ee" opacity="0.8" />
-  <circle cx="62" cy="61" r="2" fill="#38bdf8" opacity="0.8" />
-</svg>
-
+                className="w-56 h-56 text-cyan-400/80 drop-shadow-[0_0_15px_rgba(34,211,238,0.3)] group-hover:scale-105 transition duration-500" 
+                viewBox="0 0 100 100" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M35 15 C35 5, 65 5, 65 15 L60 30 L40 30 Z" fill="#1e293b" />
+                <path d="M35 85 C35 95, 65 95, 65 85 L60 70 L40 70 Z" fill="#1e293b" />
+                
+                <rect x="25" y="25" width="50" height="50" rx="12" fill="#0f172a" stroke="#334155" strokeWidth="2" />
+                
+                <rect x="29" y="29" width="42" height="42" rx="8" fill="#020617" />
+                
+                <rect x="75" y="42" width="3" height="16" rx="1.5" fill="#64748b" />
+                
+                <text x="50" y="49" fill="#22d3ee" fontSize="10" fontWeight="bold" textAnchor="middle" fontFamily="sans-serif">10:09</text>
+                
+                <circle cx="50" cy="61" r="5" stroke="#1e293b" strokeWidth="1.5" fill="none" />
+                <circle cx="50" cy="61" r="5" stroke="#22d3ee" strokeWidth="1.5" strokeDasharray="20 10" fill="none" />
+                
+                <circle cx="38" cy="61" r="2" fill="#22d3ee" opacity="0.8" />
+                <circle cx="62" cy="61" r="2" fill="#38bdf8" opacity="0.8" />
+              </svg>
             </div>
             
             {/* Dynamic Variant Selector */}
@@ -152,36 +151,32 @@ export default function PremiumProductLanding() {
                 Add To Bag
               </button>
             </div>
-
-            {/* Core Trust Indicators */}
-          
           </div>
         </div>
 
         {/* 3. DETAILED FEATURES SECTION */}
         <section id="features" className="py-24 space-y-16">
-     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-neutral-800 text-center text-xs font-bold tracking-wide text-neutral-400">
-  
-  {/* ১. ফাস্ট ডেলিভারি */}
-  <div className="p-3 bg-neutral-900/30 rounded-xl border border-neutral-900 flex items-center justify-center gap-2">
-    <i className="bi bi-lightning-charge-fill text-yellow-400 text-sm"></i>
-    <span>Nationwide Fast Delivery</span>
-  </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-neutral-800 text-center text-xs font-bold tracking-wide text-neutral-400">
+            {/* ১. ফাস্ট ডেলিভারি */}
+            <div className="p-3 bg-neutral-900/30 rounded-xl border border-neutral-900 flex items-center justify-center gap-2">
+              <i className="bi bi-lightning-charge-fill text-yellow-400 text-sm"></i>
+              <span>Nationwide Fast Delivery</span>
+            </div>
 
-  {/* ২. ব্র্যান্ড ওয়ারেন্টি */}
-  <div className="p-3 bg-neutral-900/30 rounded-xl border border-neutral-900 flex items-center justify-center gap-2">
-    <i className="bi bi-shield-check text-emerald-400 text-sm"></i>
-    <span>1-Year Brand Warranty</span>
-  </div>
+            {/* ২. ব্র্যান্ড ওয়ারেন্টি */}
+            <div className="p-3 bg-neutral-900/30 rounded-xl border border-neutral-900 flex items-center justify-center gap-2">
+              <i className="bi bi-shield-check text-emerald-400 text-sm"></i>
+              <span>1-Year Brand Warranty</span>
+            </div>
 
-  {/* ৩. ক্যাশ অন ডেলিভারি */}
-  <div className="p-3 bg-neutral-900/30 rounded-xl border border-neutral-900 flex items-center justify-center gap-2">
-    <i className="bi bi-people-fill text-cyan-400 text-sm"></i>
-    <span>Cash On Delivery</span>
-  </div>
-
-</div>
-     <div className="text-center max-w-2xl mx-auto space-y-4">
+            {/* ৩. ক্যাশ অন ডেলিভারি */}
+            <div className="p-3 bg-neutral-900/30 rounded-xl border border-neutral-900 flex items-center justify-center gap-2">
+              <i className="bi bi-people-fill text-cyan-400 text-sm"></i>
+              <span>Cash On Delivery</span>
+            </div>
+          </div>
+          
+          <div className="text-center max-w-2xl mx-auto space-y-4">
             <h2 className="text-3xl md:text-4xl font-black tracking-tight text-white">Why Upgrade to AuraPulse?</h2>
             <p className="text-neutral-400">Engineered to outperform the market standards with ground-breaking integration systems.</p>
           </div>
@@ -193,7 +188,7 @@ export default function PremiumProductLanding() {
               <p className="text-neutral-400 text-sm leading-relaxed">Advanced power-optimization computing ensures continuous workflow tracking for two full weeks without a charge.</p>
             </div>
             <div className="bg-neutral-900/40 p-8 rounded-2xl border border-neutral-800 hover:border-neutral-700 transition">
-              ️<i className="bi bi-heart-pulse-fill display-6 text-3xl mb-4 text-red-400"></i>
+              <i className="bi bi-heart-pulse-fill display-6 text-3xl mb-4 text-red-400"></i>
               <h3 className="font-extrabold text-white text-xl mb-2">Precision Bio-Tracking</h3>
               <p className="text-neutral-400 text-sm leading-relaxed">Real-time photoplethysmogram system records heart rates, SpO2 counts, stress thresholds, and clinical deep-sleep metrics.</p>
             </div>
@@ -267,7 +262,7 @@ export default function PremiumProductLanding() {
               <div className="space-y-1.5">
                 <label className="text-xs uppercase tracking-wider font-bold text-neutral-400">Full Shipping Address</label>
                 <textarea 
-                  rows="3"
+                  rows={3}
                   required
                   placeholder="House number, Street name, Area/Thana, District" 
                   value={formData.address}
